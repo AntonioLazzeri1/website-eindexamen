@@ -24,7 +24,7 @@
            
 <section id="info">
     <div class="button-container">
-        <a href="index.html" class="button">Home</a>
+        <a href="index.php" class="button">Home</a>
         <a href="indexproducten.html" class="button">Producten</a>
         <a href="index4.html" class="button">contact</a>
         
@@ -76,7 +76,57 @@
             </div>
         </div>
     </div>
-
+    <div class="stock-notification">
+        <h2>Product niet op voorraad?</h2>
+        <p>Laat je e-mailadres achter om een melding te krijgen wanneer dit product weer beschikbaar is:</p>
+        <form action="notify.php" method="POST">
+            <input type="email" name="email" placeholder="Voer je e-mailadres in" required>
+            <input type="hidden" name="product_id" value="1"> <!-- Je kunt de product-ID hier dynamisch invullen -->
+            <button type="submit">Meld me aan</button>
+        </form>
+    </div>
+    
    
 </body>
 </html>
+<?php
+// Verbinding maken met de database
+$host = 'localhost';
+$dbname = 'stock_notifications';
+$username = 'root';  // Pas aan met je gegevens
+$password = '';      // Pas aan met je gegevens
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Controleer of het formulier is ingediend
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Haal het e-mailadres en product-ID uit het formulier
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $product_id = $_POST['product_id'];
+
+        // Bereid de SQL voor om de gegevens in de database op te slaan
+        $sql = "INSERT INTO notifications (email, product_id, notified) VALUES (:email, :product_id, 0)";
+        $stmt = $conn->prepare($sql);
+
+        // Voer de SQL uit met de ingevoerde waarden
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':product_id', $product_id);
+
+        if ($stmt->execute()) {
+            // Redirect naar de homepage met een 'success' melding
+            header("Location: index.php?success=1");
+            exit();
+        } else {
+            echo "Er is iets misgegaan, probeer het opnieuw.";
+        }
+    }
+} catch (PDOException $e) {
+    echo "Fout bij verbinden met de database: " . $e->getMessage();
+}
+?>
+echo '<div>
+        <p>Je bent succesvol aangemeld voor notificaties!</p>
+        <a href="index.php" style="padding: 10px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">Terug naar Homepagina</a>
+      </div>';

@@ -7,6 +7,7 @@
     
     <script src="https://kit.fontawesome.com/9981c6e65d.js" crossorigin="anonymous"></script>
    
+    
 </head>
 <body>
 <header>    
@@ -26,7 +27,7 @@
 
 <section id="info">
     <div class="button-container">
-      <a href="index.html" class="button">Home</a>
+      <a href="index.php" class="button">Home</a>
       <a href="indexproducten.html" class="button">Producten</a>
       <a href="index4.html" class="button">contact</a>
         
@@ -124,3 +125,12 @@
 
 </body>
 </html>
+
+<?php
+// Controleer of er een 'success' parameter in de URL staat
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+    echo '<div style="background-color: #d4edda; color: #155724; padding: 10px; border: 1px solid #c3e6cb;">
+            <strong>Succes!</strong> Je bent aangemeld voor een notificatie wanneer het product weer op voorraad is.
+          </div>';
+}
+?>
