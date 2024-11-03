@@ -1,13 +1,13 @@
-function openTab(event, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+
+    
+    function validateEmail(event) {
+        const emailInput = document.querySelector('input[name="email"]');
+        const email = emailInput.value;
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        
+        // Controleer de e-mail met een reguliere expressie
+        if (!emailPattern.test(email)) {
+            event.preventDefault(); // Stop het formulier indien onjuist
+            alert("Vul een geldig e-mailadres in, zoals example@domain.com.");
+        }
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    event.currentTarget.className += " active";
-  }
