@@ -96,3 +96,82 @@ ul, ol {
     border-radius: 5px;
     margin-top: 20px;
 }
+
+footer {
+  background-color: rgb(19, 248, 87);
+
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position:static;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around; /* Verdeel de ruimte tussen de items */
+}
+.contact-details {
+  color: white; /* Witte tekstkleur */
+}
+
+.contact-details p {
+  margin: 5px 0;
+}
+
+
+.stock-notification {
+  background-color: white;        /* Witte achtergrondkleur */
+  border: 2px solid black;        /* Zwarte omranding van 2px */
+  padding: 20px;                  /* Binnenruimte rond de inhoud */
+  max-width: 400px;               /* Maximale breedte van de blok */
+  margin: 20px auto;              /* Centraal plaatsen met marge erboven en onder */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);  /* Lichte schaduw voor diepte */
+  border-radius: 8px;             /* Afgeronde hoeken */
+  text-align: center;             /* Tekst gecentreerd */
+}
+
+
+.stock-notification h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.stock-notification p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.stock-notification form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stock-notification input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.stock-notification button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.stock-notification button:hover {
+  background-color: #333;
+}
