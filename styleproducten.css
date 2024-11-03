@@ -1,186 +1,204 @@
+/* Algemene styling voor de body */
 body {
-  
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #ffffff;
-  }
-  
-  .button-container {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    margin-left: 160vh;
-
-  }
-  
-  .button {
-    padding: 15px 20px;
-    margin: 5px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: #2980b9;
-  }
-
-.bovenkant-container{
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Centreert de inhoud horizontaal binnen een flexbox */
+  align-items: center; /* Centreert de inhoud verticaal binnen een flexbox */
+  height: 100vh; /* Zet de hoogte van de body op 100% van de viewport hoogte */
+  margin: 0; /* Verwijdert standaard marges rond de body */
+  background-color: #ffffff; /* Achtergrondkleur van de body */
 }
 
- 
+/* Container voor knoppen met flexbox */
+.button-container {
+  display: flex; /* Flexbox layout voor de container */
+  flex-direction: row; /* Plaatst knoppen in een rij */
+  align-items: center; /* Centreert knoppen verticaal in de container */
+  margin-left: 160vh; /* Grote linkermarge, kan leiden tot een ongewone positie van de container */
+}
 
+/* Stijlen voor knoppen */
+.button {
+  padding: 15px 20px; /* Opvulling binnen de knop */
+  margin: 5px; /* Marges tussen knoppen */
+  background-color: #3498db; /* Achtergrondkleur van de knop */
+  color: #fff; /* Tekstkleur in de knop */
+  border: none; /* Geen rand voor de knop */
+  border-radius: 8px; /* Afgeronde hoeken voor de knop */
+  cursor: pointer; /* Cursor verandert in pointer bij hover */
+  font-size: 16px; /* Grootte van de tekst in de knop */
+  font-weight: bold; /* Maakt de tekst vetgedrukt */
+  text-transform: uppercase; /* Zet de tekst in hoofdletters */
+  letter-spacing: 1px; /* Ruimte tussen letters */
+  transition: background-color 0.3s ease-in-out; /* Animatie voor achtergrondkleur bij hover */
+}
+
+/* Hover-effect voor knoppen */
+.button:hover {
+  background-color: #2980b9; /* Donkerdere kleur bij hover */
+}
+
+/* Container voor de bovenkant van de pagina */
+.bovenkant-container {
+  display: flex; /* Flexbox layout voor de bovenkant */
+  flex-direction: row; /* Plaatst elementen in een rij */
+  align-items: center; /* Centreert items verticaal */
+  justify-content: space-between; /* Verdeelt ruimte tussen items */
+}
+
+/* Stijlen voor de header */
 header {
-  background-color: rgb(19, 248, 87);
+  background-color: rgb(19, 248, 87); /* Achtergrondkleur van de header */
 }
 
-
-.socials{
-  padding-right: 20px;
-  flex-direction: row;
+/* Stijlen voor sociale media sectie */
+.socials {
+  padding-right: 20px; /* Ruimte aan de rechterkant van de sociale media sectie */
+  flex-direction: row; /* Plaatst sociale media iconen in een rij */
 }
 
-h1{
-  padding-left: 20px;
+/* Stijlen voor de hoofdkop (h1) */
+h1 {
+  padding-left: 20px; /* Ruimte aan de linkerkant van de h1 */
 }
 
-img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  
+/* Stijlen voor afbeeldingen */
+img {
+  display: block; /* Zorgt ervoor dat de afbeelding als block-element wordt weergegeven */
+  margin-left: auto; /* Automatische marges om het centreren te vergemakkelijken */
+  margin-right: auto; /* Automatische marges om het centreren te vergemakkelijken */
+  width: 50%; /* Breedte van de afbeelding op 50% van de container */
 }
 
-
+/* Container voor beschrijving met een vaste breedte */
 .beschrijving-container {
-  width: 300px; /* Breedte van de container aanpassen zoals gewenst */
+  width: 300px; /* Vaste breedte van de container */
   border: 1px solid black; /* Rand om de container */
   padding: 20px; /* Ruimte tussen de tekst en de rand van de container */
-  text-align: justify; /* Uitlijning van de tekst */
-  margin-left: auto;
-margin-right: auto;
-margin-bottom: 100px;
+  text-align: justify; /* Uitlijning van de tekst in de container */
+  margin-left: auto; /* Centreren van de container met automatische marges */
+  margin-right: auto; /* Centreren van de container met automatische marges */
+  margin-bottom: 100px; /* Ruimte onder de container */
 }
 
-  h2{
-    margin-top: 100px;
-    margin-left: 42%;
-    
-  }
-
-  popular-orders-container {
-    background-color: #ffffff; /* Achtergrondkleur voor het vakje */
-    border: 1px solid #dddddd; /* Rand rond het vakje */
-    padding: 20px;
-    border-radius: 10px; /* Afgeronde hoeken voor het vakje */
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Schaduw voor het vakje */
-  }
-  
-  .popular-orders {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .order {
-    margin: 10px;
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #080808; /* Rand rond elke bestelling */
-    border-radius: 5px; /* Afgeronde hoeken voor elke bestelling */
-    background-color: #f0d6d6; /* Achtergrondkleur voor elke bestelling */
-  }
-  
-  .order img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; /* Afgeronde hoeken voor de afbeeldingen */
-  }
-  
-  .order h3, .order p {
-    margin: 5px 0;
-  }
-  
-  .order button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px; /* Afgeronde hoeken voor de knop */
-  }
-
-
-  footer {
-    background-color: rgb(19, 248, 87);
-  
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position:absolute;
-    width: 100%;
-    bottom: 0;
+/* Stijlen voor de secundaire kop (h2) */
+h2 {
+  margin-top: 100px; /* Ruimte boven de h2 */
+  margin-left: 42%; /* Linkermarge voor de h2, kan leiden tot een ongewone positionering */
 }
 
+/* Stijlen voor de populaire bestellingen container */
+.popular-orders-container {
+  background-color: #ffffff; /* Achtergrondkleur voor het vakje */
+  border: 1px solid #dddddd; /* Rand rond het vakje */
+  padding: 20px; /* Opvulling binnen het vakje */
+  border-radius: 10px; /* Afgeronde hoeken voor het vakje */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+}
+
+/* Flexbox layout voor populaire bestellingen */
+.popular-orders {
+  display: flex; /* Flexbox layout voor de populaire bestellingen */
+  justify-content: center; /* Centreert de bestellingen in de container */
+  flex-wrap: wrap; /* Maakt het mogelijk om te wrappen naar een nieuwe regel als nodig */
+}
+
+/* Stijlen voor individuele bestellingen */
+.order {
+  margin: 10px; /* Ruimte rondom elke bestelling */
+  width: 200px; /* Vaste breedte voor elke bestelling */
+  padding: 10px; /* Opvulling binnen de bestelling */
+  border: 1px solid #080808; /* Rand rond elke bestelling */
+  border-radius: 5px; /* Afgeronde hoeken voor elke bestelling */
+  background-color: #f0d6d6; /* Achtergrondkleur voor elke bestelling */
+}
+
+/* Stijlen voor afbeeldingen binnen bestellingen */
+.order img {
+  width: 100%; /* Breedte van de afbeelding op 100% van de container */
+  height: auto; /* Houdt de hoogte in verhouding tot de breedte */
+  border-radius: 5px; /* Afgeronde hoeken voor de afbeeldingen */
+}
+
+/* Stijlen voor koppen en paragrafen binnen bestellingen */
+.order h3, .order p {
+  margin: 5px 0; /* Ruimte boven en onder de elementen */
+}
+
+/* Stijlen voor knoppen binnen bestellingen */
+.order button {
+  background-color: #007bff; /* Achtergrondkleur van de knop */
+  color: white; /* Tekstkleur in de knop */
+  border: none; /* Geen rand voor de knop */
+  padding: 5px 10px; /* Opvulling binnen de knop */
+  cursor: pointer; /* Cursor verandert in pointer bij hover */
+  border-radius: 3px; /* Afgeronde hoeken voor de knop */
+}
+
+/* Stijlen voor de footer */
+footer {
+  background-color: rgb(19, 248, 87); /* Achtergrondkleur van de footer */
+  color: white; /* Tekstkleur in de footer */
+  text-align: center; /* Centreert de tekst in de footer */
+  padding: 20px 0; /* Opvulling boven en onder in de footer */
+  position: absolute; /* Vaste positie voor de footer */
+  width: 100%; /* Breedte van de footer op 100% */
+  bottom: 0; /* Plaatst de footer onderaan de pagina */
+}
+
+/* Stijlen voor paragrafen in de footer */
 footer p {
-    margin: 0;
-    font-size: 16px;
+  margin: 0; /* Geen marge voor de paragraaf in de footer */
+  font-size: 16px; /* Lettergrootte van de tekst in de footer */
 }
-  
-  .contact-info {
-    display: flex;
-    justify-content: space-around; /* Verdeel de ruimte tussen de items */
-  }
-  
-  .contact-details {
-    color: white; /* Witte tekstkleur */
-  }
-  
-  .contact-details p {
-    margin: 5px 0;
-  }
 
-  .authentic-block {
-    background-color: #f0d6d6;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-  }
-  
-  .block-title {
-    color: #333;
-  }
-  
-  .block-content {
-    margin-bottom: 20px;
-  }
-  
-  .block-rating {
-    color: #bd9a30;
-    margin-bottom: 10px;
-  }
-  
-  .block-authentic {
-    border-top: 1px solid #111111;
-    padding-top: 10px;
-  }
-  
-  .block-authentic p {
-    color: #666;
-  }
+/* Container voor contactinformatie met flexbox */
+.contact-info {
+  display: flex; /* Flexbox layout voor contactinformatie */
+  justify-content: space-around; /* Verdeelt de ruimte gelijkmatig tussen de items */
+}
+
+/* Stijlen voor contactgegevens */
+.contact-details {
+  color: white; /* Witte tekstkleur voor contactgegevens */
+}
+
+/* Stijlen voor paragrafen binnen contactgegevens */
+.contact-details p {
+  margin: 5px 0; /* Ruimte boven en onder elke paragraaf */
+}
+
+/* Stijlen voor de authentieke blokken */
+.authentic-block {
+  background-color: #f0d6d6; /* Achtergrondkleur voor het authentieke blok */
+  padding: 20px; /* Opvulling binnen het blok */
+  margin: 20px auto; /* Marges om het blok centreren */
+  border-radius: 10px; /* Afgeronde hoeken voor het blok */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+  max-width: 600px; /* Maximale breedte van het blok */
+}
+
+/* Stijlen voor de titel van het blok */
+.block-title {
+  color: #333; /* Donkere kleur voor de bloktitel */
+}
+
+/* Stijlen voor de inhoud van het blok */
+.block-content {
+  margin-bottom: 20px; /* Ruimte onder de blokinhoud */
+}
+
+/* Stijlen voor de rating in het blok */
+.block-rating {
+  color: #bd9a30; /* Kleur voor de rating, goudachtig */
+  margin-bottom: 10px; /* Ruimte onder de rating */
+}
+
+/* Stijlen voor het authentieke blok */
+.block-authentic {
+  border-top: 1px solid #111111; /* Donkere lijn bovenaan het authentieke blok */
+  padding-top: 10px; /* Opvulling boven de inhoud */
+}
+
+/* Stijlen voor paragrafen binnen het authentieke blok */
+.block-authentic p {
+  color: #666; /* Lichtere kleur voor tekst in het authentieke blok */
+}

@@ -1,36 +1,50 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
+<!-- HTML5 document met taalinstelling op Engels -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Instellen van karaktercodering op UTF-8 voor juiste weergave van speciale karakters -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Zorgt ervoor dat de pagina responsive is en schaalt naar de schermgrootte van het apparaat -->
+
     <title>Document</title>
+    <!-- Titel van de pagina, weergegeven in het browsertabblad -->
+
     <link rel="stylesheet" href="style2.css">
-   
+    <!-- Link naar een extern CSS-bestand voor de stijl van deze pagina -->
+
     <script src="https://kit.fontawesome.com/9981c6e65d.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome script voor het gebruik van iconen, zoals sociale media-symbolen -->
+
     <script>
     // JavaScript-functie om e-mailvalidatie uit te voeren
     function validateEmail(event) {
         const emailInput = document.querySelector('input[name="email"]');
         const email = emailInput.value;
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        
-        // Controleer de e-mail met een reguliere expressie
+
+        // Controleert of de ingevoerde e-mail aan het reguliere expressiepatroon voldoet
         if (!emailPattern.test(email)) {
-            event.preventDefault(); // Stop het formulier indien onjuist
+            event.preventDefault(); // Formulier wordt niet verzonden als e-mail ongeldig is
             alert("Vul een geldig e-mailadres in, zoals example@domain.com.");
         }
     }
-</script>
-
-   
+    </script>
+    <!-- JavaScript-functie die wordt aangeroepen bij het indienen van het formulier; controleert of het e-mailadres correct is -->
 </head>
+
 <body>
     <header>
         <div class="bovenkant-container">
             <h1>Lazzeri</h1>
             <p>Vandaag besteld, morgen in huis</p>
+            <!-- Bedrijfsnaam en slogan bovenaan de pagina -->
+
             <nav>
                 <ul class="socials">
+                    <!-- Sociale media-iconen in een ongeordende lijst -->
                     <li class="social-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
                     <li class="social-item"><a href="https://www.tiktok.com/nl-NL/"><i class="fab fa-tiktok"></i></a></li>
                 </ul>
@@ -39,6 +53,7 @@
     </header>
    
     <section id="info">
+        <!-- Navigatiesectie met knoppen om naar verschillende pagina's te gaan -->
         <div class="button-container">
             <a href="index.html" class="button">Home</a>
             <a href="indexproducten.html" class="button">Producten</a>
@@ -48,14 +63,18 @@
 
     <div class="container">
         <h1>De Haarverwijderende Borstel</h1>
+        <!-- Productnaam als koptekst -->
+
         <img src="antonioi12.jpg" alt="De Haarverwijderende Borstel in actie">
-        
+        <!-- Afbeelding van het product met beschrijving -->
+
         <h2>Kenmerken</h2>
         <ul>
             <li>Eén druk op de knop voor moeiteloze haarverwijdering</li>
             <li>Efficiënt ontwerp voor grondige reiniging</li>
             <li>Ergonomisch handvat voor comfortabel gebruik</li>
         </ul>
+        <!-- Lijst met kenmerken van het product -->
 
         <h2>Hoe het werkt</h2>
         <ol>
@@ -63,6 +82,7 @@
             <li>Druk op de knop om alle vastzittende haren te verwijderen.</li>
             <li>Geniet van een schone borstel!</li>
         </ol>
+        <!-- Genummerde lijst met uitleg over het gebruik van het product -->
 
         <h2>Waarom kiezen voor de Haarverwijderende Borstel?</h2>
         <ul>
@@ -70,46 +90,63 @@
             <li>Behoud de kwaliteit van je borstel voor langdurig gebruik.</li>
             <li>Geniet van een haarvrij resultaat in een handomdraai!</li>
         </ul>
+        <!-- Lijst met voordelen van het product voor de gebruiker -->
 
         <div class="testimonial">
             <h2>Klantrecensies</h2>
+            <!-- Sectie voor klantrecensies over het product -->
+            
             <div class="review">
                 <p class="rating">★★★★☆</p>
                 <p>"Deze borstel is echt geweldig! Het verwijdert het haar gemakkelijk en de knop om het haar te verwijderen werkt perfect."</p>
                 <p>- Lisa</p>
             </div>
+            <!-- Eerste klantrecensie met beoordeling en citaat -->
+
             <div class="review">
                 <p class="rating">★★★★★</p>
                 <p>"Ik ben dol op deze borstel! Het bespaart me zoveel tijd en het is zo gemakkelijk te gebruiken. Zeker een aanrader!"</p>
                 <p>- Peter</p>
             </div>
+            <!-- Tweede klantrecensie met beoordeling en citaat -->
+
             <div class="review">
                 <p class="rating">★★★☆☆</p>
                 <p>"Goede borstel, maar ik had gehoopt dat het haar nog beter zou verwijderen. Over het algemeen ben ik wel tevreden."</p>
                 <p>- Michelle</p>
             </div>
+            <!-- Derde klantrecensie met beoordeling en citaat -->
         </div>
     </div>
 
     <div class="stock-notification">
         <h2>Product niet op voorraad?</h2>
         <p>Laat je e-mailadres achter om een melding te krijgen wanneer dit product weer beschikbaar is:</p>
+        <!-- Instructie voor gebruikers om zich aan te melden voor meldingen als het product niet beschikbaar is -->
+
         <form action="index.html" method="POST" onsubmit="validateEmail(event)">
             <input type="email" name="email" placeholder="Voer je e-mailadres in" required>
+            <!-- Invoerveld voor e-mailadres met validatie en placeholder-tekst -->
+
             <input type="hidden" name="product_id" value="1">
+            <!-- Verborgen veld om het product-ID mee te sturen bij het formulier -->
+
             <button type="submit">Meld me aan</button>
+            <!-- Knop om het formulier in te dienen -->
         </form>
-    
     </div>
+
     <footer>
         <div class="contact-info">
-          <h3>Contactgegevens</h3>
-          <div class="contact-details">
-            <p><strong>Naam:</strong> Antonio Lazzeri</p>
-            <p><strong>Adres:</strong> [Jouw Adres]</p>
-            <p><strong>Telefoon:</strong> [Jouw Telefoonnummer]</p>
-          </div>
+            <h3>Contactgegevens</h3>
+            <div class="contact-details">
+                <p><strong>Naam:</strong> Antonio Lazzeri</p>
+                <p><strong>Adres:</strong> [Jouw Adres]</p>
+                <p><strong>Telefoon:</strong> [Jouw Telefoonnummer]</p>
+                <!-- Contactinformatie van het bedrijf in de voettekst -->
+            </div>
         </div>
-      </footer>
+    </footer>
+    <!-- Einde van de footer sectie -->
 </body>
 </html>

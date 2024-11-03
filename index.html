@@ -1,136 +1,134 @@
 <!DOCTYPE html>
-<html lang="en"><link rel="stylesheet" href="style.css">
+<html lang="en">
+<!-- Hier wordt aangegeven dat het document HTML5 is en de taal Engels gebruikt -->
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- De karakterset wordt ingesteld op UTF-8, wat betekent dat speciale karakters goed worden weergegeven -->
     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Zorgt ervoor dat de pagina responsive is door de weergavebreedte af te stemmen op het scherm van het apparaat -->
+    
+    <title>Document</title>
+    <!-- De titel van de pagina wordt weergegeven in de browser-tab -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Verwijzing naar een externe CSS-bestand voor opmaak van de pagina -->
+
     <script src="https://kit.fontawesome.com/9981c6e65d.js" crossorigin="anonymous"></script>
-   
+    <!-- Script voor het gebruik van FontAwesome pictogrammen, zoals sociale media-iconen -->
 </head>
 
-
-
 <body>
-    <!-- Plaats dit bovenaan het body-gedeelte van index.html -->
+    <!-- Het body-gedeelte begint hier, dat de inhoud van de pagina bevat -->
 
+    <header>    
+        <div class="bovenkant-container">
+            <h1>Lazzeri</h1>
+            <p>vandaag besteld morgen in huis</p>
+            <!-- Bedrijfsnaam en slogan -->
 
-<header>    
-    <div class="bovenkant-container">
-<h1>Lazzeri</h1>
-<p>vandaag besteld morgen in huis</p>
-<nav>
-  <ul class="socials">
-      <li class="social-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-      <li class="social-item"><a href="https://www.tiktok.com/nl-NL/"><i class="fab fa-tiktok"></i></a></li>
-  </ul>
-</nav>  
-</div>
-       </header>
-
-
-
-<section id="info">
-    <div class="button-container">
-      <a href="index.html" class="button">Home</a>
-      <a href="indexproducten.html" class="button">Producten</a>
-      <a href="index4.html" class="button">contact</a>
-        
-      </div>
-    </section>
-<section id="picture">
-    <img src="lazzeri.jpg" alt=""><img/>
-
-
-    <section class="popular-orders-container">
-        <h2>Populaire bestellingen</h2>
-        <div class="popular-orders">
-          <div class="order">
-            <img src="antonio11.jpg" alt="Product 1">
-            <h3>Productnaam 1</h3>
-            <p>Prijs: €19.99</p>
-            <a href="index3.html">
-                <button type="button">Bestel nu</button>
-            </a>
-            
-
-          </div>
-          <div class="order">
-            <img src="antonioi12.jpg" alt="Product 2">
-            <h3>Productnaam 2</h3>
-            <p>Prijs: €24.99</p>
-            <a href="index2.html">
-                <button type="button">Bestel nu</button>
-            </a>
-          </div>
-         
+            <nav>
+                <ul class="socials">
+                    <!-- Lijst met links naar sociale media profielen -->
+                    <li class="social-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li class="social-item"><a href="https://www.tiktok.com/nl-NL/"><i class="fab fa-tiktok"></i></a></li>
+                    <!-- Instagram- en TikTok-iconen van FontAwesome -->
+                </ul>
+            </nav>
         </div>
-      </section>
+    </header>
 
+    <section id="info">
+        <!-- Een sectie met knoppen voor navigatie naar verschillende pagina's -->
+        <div class="button-container">
+            <a href="index.html" class="button">Home</a>
+            <a href="indexproducten.html" class="button">Producten</a>
+            <a href="index4.html" class="button">Contact</a>
+        </div>
+    </section>
 
-    
-    <H2>beschrijving van ons product</H2>
-    <div class="beschrijving-container">
-        <P>Wij proberen om jou de beste ervaring te geven met ons product wij hopen dat jij goed voelt met ons product. Wij hebben altijd garantie voordeel van 30 dagen vind je ons product goed of niet laat review achter zodat de volgende klant baat bij heeft </P>
+    <section id="picture">
+        <!-- Sectie voor een afbeelding -->
+        <img src="lazzeri.jpg" alt="">
+        <!-- Afbeelding die mogelijk het merk of product vertegenwoordigt -->
+
+        <section class="popular-orders-container">
+            <h2>Populaire bestellingen</h2>
+            <!-- Titel voor de sectie van populaire bestellingen -->
+            
+            <div class="popular-orders">
+                <!-- Container voor afzonderlijke bestellingen -->
+                
+                <div class="order">
+                    <img src="antonio11.jpg" alt="Product 1">
+                    <h3>Productnaam 1</h3>
+                    <p>Prijs: €19.99</p>
+                    <a href="index3.html">
+                        <button type="button">Bestel nu</button>
+                    </a>
+                    <!-- Eerste populaire product met afbeelding, naam, prijs en bestelknop -->
+                </div>
+                
+                <div class="order">
+                    <img src="antonioi12.jpg" alt="Product 2">
+                    <h3>Productnaam 2</h3>
+                    <p>Prijs: €24.99</p>
+                    <a href="index2.html">
+                        <button type="button">Bestel nu</button>
+                    </a>
+                    <!-- Tweede populaire product met afbeelding, naam, prijs en bestelknop -->
+                </div>
+            </div>
+        </section>
+
+        <h2>Beschrijving van ons product</h2>
+        <div class="beschrijving-container">
+            <p>Wij proberen om jou de beste ervaring te geven met ons product...</p>
+            <!-- Beschrijving van het product en klantgerichte informatie -->
+        </div>
+    </section>
+
+    <!-- Blokken met informatie over authenticiteit en beoordelingen -->
+    <div class="authentic-block">
+        <h2 class="block-title">Authentiek Blok</h2>
+        <div class="block-content">
+            <p>Dit is een voorbeeldtekst binnen het authentieke blok...</p>
+            <!-- Authentiek informatieblok met een beoordeling en eigenaarnaam -->
+        </div>
+        <div class="block-rating">
+            <p><strong>Beoordeling:</strong> ★★★★☆ (4 van de 5 sterren)</p>
+        </div>
+        <div class="block-authentic">
+            <p><strong>Authentiek:</strong> Antonio Lazzeri</p>
+        </div>
     </div>
-</section>
-<div class="authentic-block">
-  <h2 class="block-title">Authentiek Blok</h2>
-  <div class="block-content">
-    <p>Dit is een voorbeeldtekst binnen het authentieke blok.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed velit eu elit blandit tempus. Integer sit amet mi sit amet elit dapibus vehicula. Ut euismod bibendum ante, id rhoncus metus dapibus ac.</p>
-    <p>Quisque suscipit sapien vel dolor cursus, eget elementum erat hendrerit. Nam nec neque in eros fringilla tempus.</p>
-  </div>
-  <div class="block-rating">
-    <p><strong>Beoordeling:</strong> ★★★★☆ (4 van de 5 sterren)</p>
-  </div>
-  <div class="block-authentic">
-    <p><strong>Authentiek:</strong> Antonio Lazzeri</p>
-  </div>
-</div>
-<div class="authentic-block">
-  <h2 class="block-title">Authentiek Blok 2</h2>
-  <div class="block-content">
-    <p>Dit is een ander voorbeeldtekst binnen het authentieke blok.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed velit eu elit blandit tempus. Integer sit amet mi sit amet elit dapibus vehicula. Ut euismod bibendum ante, id rhoncus metus dapibus ac.</p>
-    <p>Quisque suscipit sapien vel dolor cursus, eget elementum erat hendrerit. Nam nec neque in eros fringilla tempus.</p>
-  </div>
-  <div class="block-rating">
-    <p><strong>Beoordeling:</strong> ★★★★★ (5 van de 5 sterren)</p>
-  </div>
-  <div class="block-authentic">
-    <p><strong>Authentiek:</strong> [Naam eigenaar]</p>
-  </div>
-</div>
-<div class="authentic-block">
-  <h2 class="block-title">Authentiek Blok</h2>
-  <div class="block-content">
-    <p>Dit is een voorbeeldtekst binnen het authentieke blok.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed velit eu elit blandit tempus. Integer sit amet mi sit amet elit dapibus vehicula. Ut euismod bibendum ante, id rhoncus metus dapibus ac.</p>
-    <p>Quisque suscipit sapien vel dolor cursus, eget elementum erat hendrerit. Nam nec neque in eros fringilla tempus.</p>
-  </div>
-  <div class="block-rating">
-    <p><strong>Beoordeling:</strong> ★★★★☆ (4 van de 5 sterren)</p>
-  </div>
-  <div class="block-authentic">
-    <p><strong>Authentiek:</strong> Antonio Lazzeri</p>
-  </div>
-</div>
 
-
-<footer>
-    <div class="contact-info">
-      <h3>Contactgegevens</h3>
-      <div class="contact-details">
-        <p><strong>Naam:</strong> Antonio Lazzeri</p>
-        <p><strong>Adres:</strong> [Jouw Adres]</p>
-        <p><strong>Telefoon:</strong> [Jouw Telefoonnummer]</p>
-      </div>
+    <!-- Nog een authentiek blok, met verschillende inhoud en beoordeling -->
+    <div class="authentic-block">
+        <h2 class="block-title">Authentiek Blok 2</h2>
+        <div class="block-content">
+            <p>Dit is een ander voorbeeldtekst binnen het authentieke blok...</p>
+        </div>
+        <div class="block-rating">
+            <p><strong>Beoordeling:</strong> ★★★★★ (5 van de 5 sterren)</p>
+        </div>
+        <div class="block-authentic">
+            <p><strong>Authentiek:</strong> [Naam eigenaar]</p>
+        </div>
     </div>
-  </footer>
 
-
-
-
+    <footer>
+        <div class="contact-info">
+            <h3>Contactgegevens</h3>
+            <div class="contact-details">
+                <p><strong>Naam:</strong> Antonio Lazzeri</p>
+                <p><strong>Adres:</strong> [Jouw Adres]</p>
+                <p><strong>Telefoon:</strong> [Jouw Telefoonnummer]</p>
+                <!-- Contactinformatie van het bedrijf -->
+            </div>
+        </div>
+    </footer>
+    <!-- Voettekst met contactinformatie -->
 </body>
 </html>

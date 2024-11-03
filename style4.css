@@ -1,114 +1,126 @@
+/* Algemene styling voor de body */
 body {
-  
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f1e4e4;
-  }
-  
-  .button-container {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    margin-left: 160vh;
-
-  }
-  
-  .button {
-    padding: 15px 20px;
-    margin: 5px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: #2980b9;
-  }
-
-.bovenkant-container{
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Centreert de inhoud horizontaal */
+  align-items: center; /* Centreert de inhoud verticaal */
+  height: 100vh; /* Maakt de body 100% van de viewport hoogte */
+  margin: 0; /* Verwijdert standaard marges */
+  background-color: #f1e4e4; /* Achtergrondkleur van de body */
 }
 
- 
+/* Container voor knoppen met flexbox */
+.button-container {
+  display: flex; /* Flexbox layout voor de container */
+  flex-direction: row; /* Plaatst knoppen in een rij */
+  align-items: center; /* Centreert knoppen verticaal in de container */
+  margin-left: 160vh; /* Linkermarge, kan leiden tot een ongewone positie van de container */
+}
 
+/* Stijlen voor knoppen */
+.button {
+  padding: 15px 20px; /* Opvulling binnen de knop */
+  margin: 5px; /* Marges tussen knoppen */
+  background-color: #3498db; /* Achtergrondkleur van de knop */
+  color: #fff; /* Tekstkleur in de knop */
+  border: none; /* Geen rand voor de knop */
+  border-radius: 8px; /* Afgeronde hoeken voor de knop */
+  cursor: pointer; /* Cursor verandert in pointer bij hover */
+  font-size: 16px; /* Grootte van de tekst in de knop */
+  font-weight: bold; /* Maakt de tekst vetgedrukt */
+  text-transform: uppercase; /* Zet de tekst in hoofdletters */
+  letter-spacing: 1px; /* Ruimte tussen letters */
+  transition: background-color 0.3s ease-in-out; /* Animatie voor achtergrondkleur bij hover */
+}
+
+/* Hover-effect voor knoppen */
+.button:hover {
+  background-color: #2980b9; /* Donkerdere kleur bij hover */
+}
+
+/* Container voor de bovenkant van de pagina */
+.bovenkant-container {
+  display: flex; /* Flexbox layout voor de bovenkant */
+  flex-direction: row; /* Plaatst elementen in een rij */
+  align-items: center; /* Centreert items verticaal */
+  justify-content: space-between; /* Verdeelt ruimte tussen items */
+}
+
+/* Stijlen voor de header */
 header {
-  background-color: rgb(19, 248, 87);
+  background-color: rgb(19, 248, 87); /* Achtergrondkleur van de header */
 }
 
-
-.socials{
-  padding-right: 20px;
-  flex-direction: row;
+/* Stijlen voor sociale media sectie */
+.socials {
+  padding-right: 20px; /* Ruimte aan de rechterkant van de sociale media sectie */
+  flex-direction: row; /* Plaatst sociale media iconen in een rij */
 }
 
-h1{
-  padding-left: 20px;
+/* Stijlen voor de hoofdkop (h1) */
+h1 {
+  padding-left: 20px; /* Ruimte aan de linkerkant van de h1 */
 }
 
+/* Nogmaals body-stijl, overbodig aangezien deze eerder is gedefinieerd */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif; /* Stelt het lettertype in voor de pagina */
+  background-color: #f4f4f4; /* Achtergrondkleur van de body (dubbel) */
+  margin: 0; /* Verwijdert standaard marges (dubbel) */
+  padding: 0; /* Verwijdert standaard padding (dubbel) */
 }
 
+/* Contactblok met maximale breedte en centrering */
 .contact-block {
-    background-color: #ffffff;
-    max-width: 600px; /* Vergroot het blok */
-    margin: 50px auto;
-    padding: 30px; /* Verhoogde padding voor meer ruimte binnenin */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Iets meer schaduw voor diepte */
-    border-radius: 8px;
+  background-color: #ffffff; /* Achtergrondkleur van het contactblok */
+  max-width: 600px; /* Maximale breedte van het contactblok */
+  margin: 50px auto; /* Centreren met marge boven en onder */
+  padding: 30px; /* Opvulling binnen het contactblok */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+  border-radius: 8px; /* Afgeronde hoeken voor het blok */
 }
 
+/* Stijlen voor koppen in het contactblok */
 .contact-block h2 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 28px; /* Grotere koptekst */
+  color: #333; /* Donkere kleur voor de koptekst */
+  margin-bottom: 20px; /* Ruimte onder de koptekst */
+  font-size: 28px; /* Grootte van de koptekst */
 }
 
+/* Stijlen voor paragrafen in het contactblok */
 .contact-block p {
-    margin: 15px 0; /* Meer ruimte tussen de paragrafen */
-    color: #555;
-    font-size: 18px; /* Grotere tekst voor betere leesbaarheid */
+  margin: 15px 0; /* Meer ruimte tussen paragrafen */
+  color: #555; /* Iets lichtere kleur voor de tekst */
+  font-size: 18px; /* Grotere tekst voor betere leesbaarheid */
 }
 
+/* Stijlen voor ongeordende lijsten in het contactblok */
 .contact-block ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none; /* Geen opsommingstekens voor de lijst */
+  padding-left: 0; /* Geen padding aan de linkerkant */
 }
 
+/* Stijlen voor elementen in de ongeordende lijst */
 .contact-block ul li {
-    margin: 10px 0;
+  margin: 10px 0; /* Ruimte boven en onder elk lijstitem */
 }
 
+/* Stijlen voor sterke tekst in het contactblok */
 .contact-block strong {
-    color: #000;
+  color: #000; /* Kleur voor sterke tekst (vetgedrukt) */
 }
 
+/* Stijlen voor de footer */
 footer {
-    background-color: rgb(19, 248, 87); /* Groen */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  background-color: rgb(19, 248, 87); /* Achtergrondkleur van de footer */
+  color: white; /* Tekstkleur in de footer */
+  text-align: center; /* Centreert de tekst in de footer */
+  padding: 20px 0; /* Verticale opvulling voor de footer */
+  position: fixed; /* Vaste positie voor de footer */
+  width: 100%; /* Breedte van de footer op 100% */
+  bottom: 0; /* Plaatst de footer onderaan de pagina */
 }
 
+/* Stijlen voor paragrafen in de footer */
 footer p {
-    margin: 0;
-    font-size: 16px;
+  margin: 0; /* Geen marge voor de paragraaf in de footer */
+  font-size: 16px; /* Lettergrootte van de tekst in de footer */
 }

@@ -1,177 +1,194 @@
+/* Algemene styling voor de body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-  
-  .button-container {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    margin-left: 160vh;
-
-  }
-  
-  .button {
-    padding: 15px 20px;
-    margin: 5px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: #2980b9;
-  }
-
-.bovenkant-container{
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content: space-between;
+  font-family: Arial, sans-serif; /* Stelt het lettertype in voor de pagina */
+  background-color: #f4f4f4; /* Achtergrondkleur van de body */
+  margin: 0; /* Verwijdert standaard marges */
+  padding: 0; /* Verwijdert standaard padding */
 }
 
-         /* Algemene styling voor de pagina */
-         body {
-          font-family: Arial, sans-serif;
-          background-color: #f4f4f4;
-          padding: 0;
-          margin: 0;
-          text-align: center;
-      }
+/* Container voor knoppen met flexbox */
+.button-container {
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Plaatst knoppen in een rij */
+  align-items: center; /* Centreert knoppen verticaal in de container */
+  margin-left: 160vh; /* Linkermarge, mogelijk voor positionering */
+}
 
+/* Stijlen voor knoppen */
+.button {
+  padding: 15px 20px; /* Opvulling binnen de knop */
+  margin: 5px; /* Marges tussen knoppen */
+  background-color: #3498db; /* Achtergrondkleur van de knop */
+  color: #fff; /* Tekstkleur in de knop */
+  border: none; /* Geen rand voor de knop */
+  border-radius: 8px; /* Afgeronde hoeken voor de knop */
+  cursor: pointer; /* Cursor verandert in pointer bij hover */
+  font-size: 16px; /* Grootte van de tekst in de knop */
+  font-weight: bold; /* Maakt de tekst vetgedrukt */
+  text-transform: uppercase; /* Zet de tekst in hoofdletters */
+  letter-spacing: 1px; /* Ruimte tussen letters */
+  transition: background-color 0.3s ease-in-out; /* Animatie voor achtergrondkleur bij hover */
+}
+
+/* Hover-effect voor knoppen */
+.button:hover {
+  background-color: #2980b9; /* Donkerdere kleur bij hover */
+}
+
+/* Container voor de bovenkant van de pagina */
+.bovenkant-container {
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Plaatst elementen in een rij */
+  align-items: center; /* Centreert items verticaal */
+  justify-content: space-between; /* Verdeelt ruimte tussen items */
+}
+
+/* Stijlen voor de header */
 header {
-  background-color: rgb(19, 248, 87);
+  background-color: rgb(19, 248, 87); /* Achtergrondkleur van de header */
 }
 
-
-.socials{
-  padding-right: 20px;
-  flex-direction: row;
+/* Stijlen voor sociale media sectie */
+.socials {
+  padding-right: 20px; /* Ruimte aan de rechterkant van de socials sectie */
+  flex-direction: row; /* Plaatst sociale media iconen in een rij */
 }
 
-h1{
-  padding-left: 20px;
+/* Stijlen voor de hoofdtekst (h1) */
+h1 {
+  padding-left: 20px; /* Ruimte aan de linkerkant van de h1 */
 }
 
-
+/* Tweede body-stijl, overbodig aangezien deze eerder al is gedefinieerd */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
+  font-family: Arial, sans-serif; /* Stelt het lettertype opnieuw in (dubbel) */
+  margin: 0; /* Verwijdert standaard marges (dubbel) */
+  padding: 0; /* Verwijdert standaard padding (dubbel) */
+  background-color: #f7f7f7; /* Achtergrondkleur van de body opnieuw ingesteld (dubbel) */
 }
+
+/* Hoofdcontainer voor inhoud met maximale breedte en centrering */
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 600px; /* Maximale breedte van de container */
+  margin: 50px auto; /* Centreren met marges boven en onder */
+  padding: 20px; /* Opvulling binnen de container */
+  background-color: #fff; /* Achtergrondkleur van de container */
+  border-radius: 10px; /* Afgeronde hoeken voor de container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor diepte */
+  text-align: center; /* Centreert de tekst binnen de container */
 }
+
+/* Stijlen voor afbeeldingen */
 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+  max-width: 100%; /* Zorgt ervoor dat afbeeldingen niet groter zijn dan hun container */
+  height: auto; /* Houdt de aspect ratio van de afbeelding */
+  margin-bottom: 20px; /* Onderste marge voor ruimte onder de afbeelding */
 }
+
+/* Kleur voor koppen (h1 en h2) */
 h1, h2 {
-    color: #333;
+  color: #333; /* Donkere kleur voor de tekst */
 }
+
+/* Stijlen voor lijsten */
 ul, ol {
-    text-align: left;
-    padding-left: 20px;
+  text-align: left; /* Uitlijning van de tekst in lijsten naar links */
+  padding-left: 20px; /* Ruimte aan de linkerkant van de lijst */
 }
+
+/* Stijlen voor testimonials */
 .testimonial {
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
+  background-color: #f0f0f0; /* Achtergrondkleur voor testimonial sectie */
+  padding: 10px 20px; /* Opvulling binnen de testimonial */
+  border-radius: 5px; /* Afgeronde hoeken voor testimonials */
+  margin-top: 20px; /* Bovenmarge voor ruimte tussen testimonials */
 }
 
+/* Stijlen voor de footer */
 footer {
-  background-color: rgb(19, 248, 87);
-
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  position:static;
-  width: 100%;
-  bottom: 0;
+  background-color: rgb(19, 248, 87); /* Achtergrondkleur van de footer */
+  color: white; /* Tekstkleur in de footer */
+  text-align: center; /* Centreert de tekst in de footer */
+  padding: 20px 0; /* Verticale opvulling voor de footer */
+  position: static; /* Positionering van de footer */
+  width: 100%; /* Breedte van de footer op 100% */
+  bottom: 0; /* Plaats de footer onderaan de pagina */
 }
 
+/* Stijlen voor paragrafen in de footer */
 footer p {
-  margin: 0;
-  font-size: 16px;
+  margin: 0; /* Geen marge voor de paragraaf in de footer */
+  font-size: 16px; /* Lettergrootte van de tekst in de footer */
 }
 
+/* Contactinformatie sectie */
 .contact-info {
-  display: flex;
-  justify-content: space-around; /* Verdeel de ruimte tussen de items */
+  display: flex; /* Flexbox layout voor contactinformatie */
+  justify-content: space-around; /* Verdeelt de ruimte tussen de items */
 }
+
+/* Stijlen voor contactdetails */
 .contact-details {
-  color: white; /* Witte tekstkleur */
+  color: white; /* Witte tekstkleur voor contactdetails */
 }
 
+/* Marges voor paragrafen in contactdetails */
 .contact-details p {
-  margin: 5px 0;
+  margin: 5px 0; /* Boven- en ondermarge van 5px voor paragrafen */
 }
 
-
+/* Stijlen voor voorraadmeldingen */
 .stock-notification {
-  background-color: white;        /* Witte achtergrondkleur */
-  border: 2px solid black;        /* Zwarte omranding van 2px */
-  padding: 20px;                  /* Binnenruimte rond de inhoud */
-  max-width: 400px;               /* Maximale breedte van de blok */
-  margin: 20px auto;              /* Centraal plaatsen met marge erboven en onder */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);  /* Lichte schaduw voor diepte */
-  border-radius: 8px;             /* Afgeronde hoeken */
-  text-align: center;             /* Tekst gecentreerd */
+  background-color: white; /* Witte achtergrondkleur voor voorraadmeldingen */
+  border: 2px solid black; /* Zwarte omranding van 2px */
+  padding: 20px; /* Binnenruimte rond de inhoud */
+  max-width: 400px; /* Maximale breedte van de melding */
+  margin: 20px auto; /* Centraal plaatsen met marge erboven en onder */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor diepte */
+  border-radius: 8px; /* Afgeronde hoeken voor het meldingsblok */
+  text-align: center; /* Centreert de tekst in de melding */
 }
 
-
+/* Stijlen voor koppen in voorraadmeldingen */
 .stock-notification h2 {
-  font-size: 1.5em;
-  margin-top: 0;
+  font-size: 1.5em; /* Grootte van de kop in de melding */
+  margin-top: 0; /* Geen bovenmarge voor de kop */
 }
 
+/* Stijlen voor paragrafen in voorraadmeldingen */
 .stock-notification p {
-  font-size: 1em;
-  margin: 10px 0;
+  font-size: 1em; /* Grootte van de tekst in de melding */
+  margin: 10px 0; /* Marges boven en onder voor paragraaf */
 }
 
+/* Stijlen voor formulieren in voorraadmeldingen */
 .stock-notification form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; /* Flexbox layout voor het formulier */
+  flex-direction: column; /* Plaatst formulier elementen onder elkaar */
+  gap: 10px; /* Ruimte tussen de elementen in het formulier */
 }
 
+/* Stijlen voor e-mail invoerveld in het formulier */
 .stock-notification input[type="email"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
+  padding: 10px; /* Opvulling binnen het invoerveld */
+  border: 1px solid #ccc; /* Randkleur van het invoerveld */
+  border-radius: 4px; /* Afgeronde hoeken voor het invoerveld */
+  font-size: 1em; /* Grootte van de tekst in het invoerveld */
 }
 
+/* Stijlen voor de knop in voorraadmeldingen */
 .stock-notification button {
-  padding: 10px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s;
+  padding: 10px; /* Opvulling binnen de knop */
+  background-color: black; /* Achtergrondkleur van de knop */
+  color: white; /* Tekstkleur in de knop */
+  border: none; /* Geen rand voor de knop */
+  border-radius: 4px; /* Afgeronde hoeken voor de knop */
+  cursor: pointer; /* Cursor verandert in pointer bij hover */
+  font-size: 1em; /* Grootte van de tekst in de knop */
+  transition: background-color 0.3s; /* Animatie voor achtergrondkleur bij hover */
 }
 
+/* Hover-effect voor de knop in voorraadmeldingen */
 .stock-notification button:hover {
-  background-color: #333;
+  background-color: #333; /* Donkerdere kleur bij hover */
 }

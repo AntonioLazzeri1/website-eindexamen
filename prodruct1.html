@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basis metainformatie en koppeling naar stylesheet -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
-    <script src="https://kit.fontawesome.com/9981c6e65d.js" crossorigin="anonymous"></script>
-   
+    <link rel="stylesheet" href="style2.css"> <!-- Link naar CSS-bestand voor styling -->
+    <script src="https://kit.fontawesome.com/9981c6e65d.js" crossorigin="anonymous"></script> <!-- Font Awesome voor sociale media iconen -->
 </head>
 <body>
+    <!-- Header sectie met bedrijfsnaam en slogan -->
     <header>    
         <div class="bovenkant-container">
-    <h1>Lazzeri</h1>
-    <p>vandaag besteld morgen in huis</p>
-    <nav>
-        <ul class="socials">
-            <li class="social-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-            <li class="social-item"><a href="https://www.tiktok.com/nl-NL/"><i class="fab fa-tiktok"></i></a></li>
-        </ul>
-     </nav>
-    </div>
-           </header>
+            <h1>Lazzeri</h1> <!-- Bedrijfsnaam -->
+            <p>vandaag besteld morgen in huis</p> <!-- Slogan -->
+            <nav>
+                <ul class="socials">
+                    <!-- Sociale media iconen met links naar respectievelijke platforms -->
+                    <li class="social-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li class="social-item"><a href="https://www.tiktok.com/nl-NL/"><i class="fab fa-tiktok"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
            
-<section id="info">
-    <div class="button-container">
-        <a href="index.php" class="button">Home</a>
-        <a href="indexproducten.html" class="button">Producten</a>
-        <a href="index4.html" class="button">contact</a>
-        
-      </div>
+    <!-- Navigatiebalk voor verschillende pagina's -->
+    <section id="info">
+        <div class="button-container">
+            <a href="index.php" class="button">Home</a>
+            <a href="indexproducten.html" class="button">Producten</a>
+            <a href="index4.html" class="button">Contact</a>
+        </div>
     </section>
 
-
+    <!-- Productinformatie sectie -->
     <div class="container">
         <h1>De Haarverwijderende Borstel</h1>
-        <img src="antonio11.jpg" alt="De Haarverwijderende Borstel in actie">
+        <img src="antonio11.jpg" alt="De Haarverwijderende Borstel in actie"> <!-- Afbeelding van product -->
         
+        <!-- Kenmerken van het product -->
         <h2>Kenmerken</h2>
         <ul>
             <li>Eén druk op de knop voor moeiteloze haarverwijdering</li>
@@ -43,6 +46,7 @@
             <li>Ergonomisch handvat voor comfortabel gebruik</li>
         </ul>
 
+        <!-- Uitleg over gebruik van het product -->
         <h2>Hoe het werkt</h2>
         <ol>
             <li>Borstel zoals gebruikelijk door het haar.</li>
@@ -50,6 +54,7 @@
             <li>Geniet van een schone borstel!</li>
         </ol>
 
+        <!-- Voordelen van het product -->
         <h2>Waarom kiezen voor de Haarverwijderende Borstel?</h2>
         <ul>
             <li>Bespaar tijd en moeite bij het schoonmaken van je borstel.</li>
@@ -57,6 +62,7 @@
             <li>Geniet van een haarvrij resultaat in een handomdraai!</li>
         </ul>
 
+        <!-- Klantbeoordelingen -->
         <div class="testimonial">
             <h2>Klantrecensies</h2>
             <div class="review">
@@ -76,56 +82,63 @@
             </div>
         </div>
     </div>
+
+    <!-- Notificatieformulier voor als het product niet op voorraad is -->
     <div class="stock-notification">
         <h2>Product niet op voorraad?</h2>
         <p>Laat je e-mailadres achter om een melding te krijgen wanneer dit product weer beschikbaar is:</p>
         <form action="notify.php" method="POST">
-            <input type="email" name="email" placeholder="Voer je e-mailadres in" required>
-            <input type="hidden" name="product_id" value="1"> <!-- Je kunt de product-ID hier dynamisch invullen -->
+            <input type="email" name="email" placeholder="Voer je e-mailadres in" required> <!-- E-mailadres invoerveld -->
+            <input type="hidden" name="product_id" value="1"> <!-- Verborgen veld voor product-ID -->
             <button type="submit">Meld me aan</button>
         </form>
     </div>
     
-   
 </body>
 </html>
+
 <?php
-// Verbinding maken met de database
+// PHP code voor databaseverbinding en formulierverwerking
 $host = 'localhost';
 $dbname = 'stock_notifications';
-$username = 'root';  // Pas aan met je gegevens
-$password = '';      // Pas aan met je gegevens
+$username = 'root';  // Databasegebruikersnaam
+$password = '';      // Databasewachtwoord
 
 try {
+    // Maak verbinding met de database
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Controleer of het formulier is ingediend
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Haal het e-mailadres en product-ID uit het formulier
-        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        // Haal en verwerk het e-mailadres en product-ID uit het formulier
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Verwijder ongeldige tekens
         $product_id = $_POST['product_id'];
 
-        // Bereid de SQL voor om de gegevens in de database op te slaan
+        // SQL query om notificatiegegevens in de database op te slaan
         $sql = "INSERT INTO notifications (email, product_id, notified) VALUES (:email, :product_id, 0)";
         $stmt = $conn->prepare($sql);
 
-        // Voer de SQL uit met de ingevoerde waarden
+        // Koppel de ingevoerde waarden aan de query
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':product_id', $product_id);
 
+        // Voer de query uit en controleer het resultaat
         if ($stmt->execute()) {
             // Redirect naar de homepage met een 'success' melding
             header("Location: index.php?success=1");
-            exit();
+            exit(); // Stop de uitvoering om de redirect uit te voeren
         } else {
             echo "Er is iets misgegaan, probeer het opnieuw.";
         }
     }
 } catch (PDOException $e) {
+    // Foutmelding weergeven als de databaseverbinding mislukt
     echo "Fout bij verbinden met de database: " . $e->getMessage();
 }
 ?>
+
+<!-- HTML bericht bij succesvolle aanmelding voor notificaties -->
 echo '<div>
         <p>Je bent succesvol aangemeld voor notificaties!</p>
         <a href="index.php" style="padding: 10px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">Terug naar Homepagina</a>

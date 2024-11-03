@@ -1,44 +1,60 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
+<!-- HTML5-document, taal ingesteld op Engels -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Tekenset ingesteld op UTF-8 om speciale tekens correct weer te geven -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Voor responsive design: zorgt ervoor dat de pagina schaalt naar de schermgrootte van het apparaat -->
+
     <title>Document</title>
+    <!-- Titel van de pagina, weergegeven in het tabblad van de browser -->
+
     <link rel="stylesheet" href="style2.css">
-   
+    <!-- Link naar het externe CSS-bestand voor de opmaak en styling van deze pagina -->
+
     <script src="https://kit.fontawesome.com/9981c6e65d.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome script voor het gebruik van iconen, zoals Instagram en TikTok -->
+
     <script>
-        // JavaScript-functie om e-mailvalidatie uit te voeren
+        // JavaScript-functie voor e-mailvalidatie bij het indienen van het formulier
         function validateEmail(event) {
             const emailInput = document.querySelector('input[name="email"]');
             const email = emailInput.value;
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            
-            // Controleer de e-mail met een reguliere expressie
+
+            // Controleren of de ingevoerde e-mail voldoet aan het patroon
             if (!emailPattern.test(email)) {
-                event.preventDefault(); // Stop het formulier indien onjuist
+                event.preventDefault(); // Voorkomt het verzenden van het formulier als de e-mail ongeldig is
                 alert("Vul een geldig e-mailadres in, zoals example@domain.com.");
             }
         }
     </script>
+    <!-- JavaScript wordt hier geladen en bevat een functie om het e-mailadres te valideren -->
 </head>
-<body>
 
-    
+<body>
     <header>
         <div class="bovenkant-container">
             <h1>Lazzeri</h1>
             <p>Vandaag besteld, morgen in huis</p>
+            <!-- Bedrijfsnaam en slogan bovenaan de pagina -->
+
             <nav>
                 <ul class="socials">
+                    <!-- Sociale media-iconen, geplaatst in een lijst -->
                     <li class="social-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
                     <li class="social-item"><a href="https://www.tiktok.com/nl-NL/"><i class="fab fa-tiktok"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- Header sectie met bedrijfsinformatie en sociale media-links -->
 
     <section id="info">
+        <!-- Navigatieknoppen om naar andere pagina's te gaan -->
         <div class="button-container">
             <a href="index.html" class="button">Home</a>
             <a href="indexproducten.html" class="button">Producten</a>
@@ -46,64 +62,83 @@
         </div>
     </section>
 
-        <div class="container">
-            <h1>De Haarverwijderende Borstel</h1>
-            <img src="antonio11.jpg" alt="De Haarverwijderende Borstel in actie">
-            
-            <h2>Kenmerken</h2>
-            <ul>
-                <li>Eén druk op de knop voor moeiteloze haarverwijdering</li>
-                <li>Efficiënt ontwerp voor grondige reiniging</li>
-                <li>Ergonomisch handvat voor comfortabel gebruik</li>
-            </ul>
-    
-            <h2>Hoe het werkt</h2>
-            <ol>
-                <li>Borstel zoals gebruikelijk door het haar.</li>
-                <li>Druk op de knop om alle vastzittende haren te verwijderen.</li>
-                <li>Geniet van een schone borstel!</li>
-            </ol>
-    
-            <h2>Waarom kiezen voor de Haarverwijderende Borstel?</h2>
-            <ul>
-                <li>Bespaar tijd en moeite bij het schoonmaken van je borstel.</li>
-                <li>Behoud de kwaliteit van je borstel voor langdurig gebruik.</li>
-                <li>Geniet van een haarvrij resultaat in een handomdraai!</li>
-            </ul>
-    
-            <div class="testimonial">
-                <h2>Klantrecensies</h2>
-                <div class="review">
-                    <p class="rating">★★★★☆</p>
-                    <p>"Deze borstel is echt geweldig! Het verwijdert het haar gemakkelijk en de knop om het haar te verwijderen werkt perfect."</p>
-                    <p>- Lisa</p>
-                </div>
-                <div class="review">
-                    <p class="rating">★★★★★</p>
-                    <p>"Ik ben dol op deze borstel! Het bespaart me zoveel tijd en het is zo gemakkelijk te gebruiken. Zeker een aanrader!"</p>
-                    <p>- Peter</p>
-                </div>
-                <div class="review">
-                    <p class="rating">★★★☆☆</p>
-                    <p>"Goede borstel, maar ik had gehoopt dat het haar nog beter zou verwijderen. Over het algemeen ben ik wel tevreden."</p>
-                    <p>- Michelle</p>
-                </div>
+    <div class="container">
+        <h1>De Haarverwijderende Borstel</h1>
+        <!-- Productnaam als koptekst -->
+
+        <img src="antonio11.jpg" alt="De Haarverwijderende Borstel in actie">
+        <!-- Afbeelding van het product met een beschrijvende alt-tekst -->
+
+        <h2>Kenmerken</h2>
+        <ul>
+            <li>Eén druk op de knop voor moeiteloze haarverwijdering</li>
+            <li>Efficiënt ontwerp voor grondige reiniging</li>
+            <li>Ergonomisch handvat voor comfortabel gebruik</li>
+        </ul>
+        <!-- Lijst met kenmerken van het product -->
+
+        <h2>Hoe het werkt</h2>
+        <ol>
+            <li>Borstel zoals gebruikelijk door het haar.</li>
+            <li>Druk op de knop om alle vastzittende haren te verwijderen.</li>
+            <li>Geniet van een schone borstel!</li>
+        </ol>
+        <!-- Genummerde lijst met uitleg over het gebruik van het product -->
+
+        <h2>Waarom kiezen voor de Haarverwijderende Borstel?</h2>
+        <ul>
+            <li>Bespaar tijd en moeite bij het schoonmaken van je borstel.</li>
+            <li>Behoud de kwaliteit van je borstel voor langdurig gebruik.</li>
+            <li>Geniet van een haarvrij resultaat in een handomdraai!</li>
+        </ul>
+        <!-- Lijst met voordelen voor de gebruiker -->
+
+        <div class="testimonial">
+            <h2>Klantrecensies</h2>
+            <!-- Sectie met klantrecensies over het product -->
+
+            <div class="review">
+                <p class="rating">★★★★☆</p>
+                <p>"Deze borstel is echt geweldig! Het verwijdert het haar gemakkelijk en de knop om het haar te verwijderen werkt perfect."</p>
+                <p>- Lisa</p>
             </div>
+            <!-- Eerste klantrecensie met sterrenbeoordeling en citaat -->
+
+            <div class="review">
+                <p class="rating">★★★★★</p>
+                <p>"Ik ben dol op deze borstel! Het bespaart me zoveel tijd en het is zo gemakkelijk te gebruiken. Zeker een aanrader!"</p>
+                <p>- Peter</p>
+            </div>
+            <!-- Tweede klantrecensie -->
+
+            <div class="review">
+                <p class="rating">★★★☆☆</p>
+                <p>"Goede borstel, maar ik had gehoopt dat het haar nog beter zou verwijderen. Over het algemeen ben ik wel tevreden."</p>
+                <p>- Michelle</p>
+            </div>
+            <!-- Derde klantrecensie -->
         </div>
-        
     </div>
+    <!-- Einde productinformatie en klantrecensies -->
 
     <div class="stock-notification">
         <h2>Product niet op voorraad?</h2>
         <p>Laat je e-mailadres achter om een melding te krijgen wanneer dit product weer beschikbaar is:</p>
+        <!-- Instructies voor de gebruiker om een melding te ontvangen als het product niet op voorraad is -->
+
         <form action="index.html" method="POST" onsubmit="validateEmail(event)">
             <input type="email" name="email" placeholder="Voer je e-mailadres in" required>
+            <!-- Invoerveld voor het e-mailadres met een placeholder-tekst en validatie -->
+
             <input type="hidden" name="product_id" value="1">
+            <!-- Verborgen veld met het product-ID dat bij het formulier wordt meegestuurd -->
+
             <button type="submit">Meld me aan</button>
+            <!-- Knop om het formulier te verzenden -->
         </form>
     </div>
+    <!-- Formulier voor voorraadmelding -->
+
 </body>
 
 </html>
- 
-
